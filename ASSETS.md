@@ -14,3 +14,5 @@ The inventory in `docs/asset-inventory.json` identifies the distributed bytes. I
 Raster regression fixtures under `scripts/fixtures/` are derived project artwork/render references and use the artwork license as well. EXIF metadata was removed from the six approved-paw fixtures, and embedded C2PA generation manifests were removed from public raster copies without changing encoded pixel data. These files no longer carry their original embedded authenticity manifests; AI-assisted provenance remains disclosed here.
 
 No third-party font files are bundled. The native reader uses fonts already installed on the user's Mac, with a system fallback. The illustration shown in the README is a source asset, not a live UI capture.
+
+Documentation images under `docs/media/` are generated from the public renderer and source artwork using `scripts/render-demo.sh`. They use the same artwork license. The GIF is an offscreen head-pet sequence, not a screen recording; see [demo details](docs/DEMO.md).

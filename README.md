@@ -18,6 +18,18 @@ The image above is the source illustration, not an application screenshot.
 
 The desktop app and the older browser prototype are separate implementations. The browser prototype does not reproduce every native feature.
 
+## Try it on your Mac
+
+**macOS 14+ · Chinese interface · experimental manual install**
+
+[Download macOS preview ZIP](https://github.com/hhhhhhhhzs051-dev/cat-companion/releases/download/v1.1.1-preview.1/Cat-Companion-Open-Source-macOS-manual.zip) · [First launch](docs/TRY-IT.md) · [Release downloads](https://github.com/hhhhhhhhzs051-dev/cat-companion/releases) · [Interaction demo](docs/DEMO.md)
+
+The ZIP includes the application, English/Chinese instructions and licenses. [Download its SHA-256 checksum](https://github.com/hhhhhhhhzs051-dev/cat-companion/releases/download/v1.1.1-preview.1/SHA256SUMS.txt). GitHub's “Source code” ZIP is not a runnable app. Preview binaries are ad-hoc signed, not Apple-notarized; first launch on another Mac remains unverified.
+
+![Head-pet response rendered with the native app code](docs/media/head-pet.gif)
+
+This is a rendered head-pet demonstration, not a screen recording. See [demo details](docs/DEMO.md).
+
 ## Build from source
 
 Requires macOS 14+, Xcode Command Line Tools with a macOS SDK, Python 3 and Node.js 18+ for the browser tests. No third-party app runtime packages are required. This app's interface and default messages are currently in Chinese.
@@ -29,7 +41,7 @@ zsh scripts/build-macos.sh      # full local verification, then universal app bu
 
 The build produces `.build/macos/Cat Companion Open Source.app`. It does not install or launch the app. The public build uses the separate identifier `local.catcompanion.opensource` and its own local data directory.
 
-The default signature is ad hoc. This is a source distribution, not a notarized download; see [build limitations](docs/BUILDING.md). Intel compilation is not the same as testing on an Intel Mac.
+The default signature is ad hoc. The preview is not notarized; see [build limitations](docs/BUILDING.md). Intel compilation is not the same as testing on an Intel Mac.
 
 ## Project status
 
