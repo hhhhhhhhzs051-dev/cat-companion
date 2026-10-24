@@ -1,0 +1,30 @@
+#!/bin/zsh
+set -euo pipefail
+cd "$(dirname "$0")/.."
+level_test_work=$(mktemp -d /tmp/cat-level-tests.XXXXXXXX)
+swiftc src/macos/CatGrowth.swift src/macos/CatGrowthStore.swift src/macos/CatLevel.swift scripts/level-feedback-tests.swift -o "$level_test_work/model-tests"
+"$level_test_work/model-tests"
+swiftc src/macos/CatGrowth.swift src/macos/CatGrowthStore.swift src/macos/CatLevel.swift scripts/completion-delivery-tests.swift -o "$level_test_work/delivery-tests"
+"$level_test_work/delivery-tests"
+swiftc src/macos/CatGrowth.swift src/macos/CatGrowthStore.swift src/macos/CatLevel.swift scripts/completion-stable-tests.swift -o "$level_test_work/stable-tests"
+"$level_test_work/stable-tests"
+swiftc -D CAT_PLAY_PREVIEW -D CAT_PAW_EXPERIMENT -D CAT_MENU_TEST src/macos/*.swift scripts/completion-immediate-tests.swift -framework AppKit -framework CoreImage -o "$level_test_work/immediate-tests"
+"$level_test_work/immediate-tests"
+swiftc -D CAT_PLAY_PREVIEW -D CAT_PAW_EXPERIMENT -D CAT_MENU_TEST src/macos/*.swift scripts/completion-receipt-tests.swift -framework AppKit -framework CoreImage -o "$level_test_work/receipt-tests"
+"$level_test_work/receipt-tests"
+swiftc -D CAT_PLAY_PREVIEW -D CAT_PAW_EXPERIMENT -D CAT_MENU_TEST src/macos/*.swift scripts/completion-window-support.swift scripts/completion-window-tests.swift -framework AppKit -framework CoreImage -o "$level_test_work/window-tests"
+"$level_test_work/window-tests"
+swiftc -D CAT_PLAY_PREVIEW -D CAT_PAW_EXPERIMENT -D CAT_MENU_TEST src/macos/*.swift scripts/completion-stable-window-tests.swift -framework AppKit -framework CoreImage -o "$level_test_work/stable-window-tests"
+"$level_test_work/stable-window-tests"
+swiftc -D CAT_PLAY_PREVIEW -D CAT_PAW_EXPERIMENT -D CAT_MENU_TEST src/macos/*.swift scripts/completion-window-support.swift scripts/completion-space-window-tests.swift -framework AppKit -framework CoreImage -o "$level_test_work/lifecycle-receipt-tests"
+"$level_test_work/lifecycle-receipt-tests"
+swiftc -D CAT_PLAY_PREVIEW -D CAT_PAW_EXPERIMENT -D CAT_MENU_TEST src/macos/*.swift scripts/pet-speech-tests.swift -framework AppKit -framework CoreImage -o "$level_test_work/pet-speech-tests"
+"$level_test_work/pet-speech-tests"
+swiftc -D CAT_PLAY_PREVIEW -D CAT_GROWTH_PREVIEW -D CAT_LEVEL_PREVIEW -D CAT_PAW_EXPERIMENT -D CAT_MENU_TEST src/macos/*.swift scripts/level-integration-tests.swift -framework AppKit -framework CoreImage -o "$level_test_work/integration-tests"
+"$level_test_work/integration-tests"
+swiftc -D CAT_PLAY_PREVIEW -D CAT_GROWTH_PREVIEW -D CAT_LEVEL_PREVIEW -D CAT_PAW_EXPERIMENT -D CAT_MENU_TEST src/macos/*.swift scripts/level-unopened-tests.swift -framework AppKit -framework CoreImage -o "$level_test_work/unopened-tests"
+"$level_test_work/unopened-tests"
+swiftc -D CAT_PLAY_PREVIEW -D CAT_GROWTH_PREVIEW -D CAT_LEVEL_PREVIEW -D CAT_PAW_EXPERIMENT -D CAT_MENU_TEST src/macos/*.swift scripts/level-live-tests.swift -framework AppKit -framework CoreImage -o "$level_test_work/live-tests"
+"$level_test_work/live-tests"
+swiftc -D CAT_PLAY_PREVIEW -D CAT_GROWTH_PREVIEW -D CAT_LEVEL_PREVIEW -D CAT_PAW_EXPERIMENT -typecheck -target x86_64-apple-macos14.0 src/macos/*.swift
+print 'PASS level preview Intel typecheck (not hardware verification)'
