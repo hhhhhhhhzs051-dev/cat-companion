@@ -1,0 +1,17 @@
+# Local builds, generated reports and personal customization
+.build/
+reports/
+node_modules/
+.DS_Store
+*.log
+__pycache__/
+*.pyc
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.pfx
+*.mobileprovision
+.private/
+*.local.*
