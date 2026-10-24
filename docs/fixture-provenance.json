@@ -1,0 +1,107 @@
+[
+  {
+    "file": "scripts/fixtures/build59/src/macos/CatAccessorySway.swift",
+    "sha256": "7a5554a04dfb2965d883f9d8d1556887c36274c3ea214d57a70ee43718f69ed8",
+    "baseline": "build59; public storage namespace substituted"
+  },
+  {
+    "file": "scripts/fixtures/build59/src/macos/CatDeformation.swift",
+    "sha256": "743a070b06b177bc244f87a1ae4292bc654471b792a08b2030142699cf7235fc",
+    "baseline": "build59; public storage namespace substituted"
+  },
+  {
+    "file": "scripts/fixtures/build59/src/macos/CatGrooming.swift",
+    "sha256": "41fd40620052931c2ee176322d34a4830655211c64aa0adcb0e6ea3c1e59266e",
+    "baseline": "build59; public storage namespace substituted"
+  },
+  {
+    "file": "scripts/fixtures/build59/src/macos/CatGrowth.swift",
+    "sha256": "01f11a7da2636f4deba3dc968ce2a0541f5a6847f12b3593a0a8df1d01cb0f8f",
+    "baseline": "build59; public storage namespace substituted"
+  },
+  {
+    "file": "scripts/fixtures/build59/src/macos/CatGrowthController.swift",
+    "sha256": "ecc8567b8b8b096e2398ecf2eaa6167351923ef5e87f880f8f6edd560608ce62",
+    "baseline": "build59; public storage namespace substituted"
+  },
+  {
+    "file": "scripts/fixtures/build59/src/macos/CatGrowthStore.swift",
+    "sha256": "d7ae37dce134bc22790f25671e7105a3cf09a098f385f61d15678a434e2d449d",
+    "baseline": "build59; public storage namespace substituted"
+  },
+  {
+    "file": "scripts/fixtures/build59/src/macos/CatLetter.swift",
+    "sha256": "6cf9bccaf3d2404fea4359790fabed0433d309954674cb9b654882d325b5e505",
+    "baseline": "build59; public storage namespace substituted"
+  },
+  {
+    "file": "scripts/fixtures/build59/src/macos/CatLetterDrift.swift",
+    "sha256": "427d24c456237a80110305b87ed10bc93764a18dd8b8296a0bf3ab9cdcc3c78e",
+    "baseline": "build59; public storage namespace substituted"
+  },
+  {
+    "file": "scripts/fixtures/build59/src/macos/CatLevel.swift",
+    "sha256": "a2dd6d2333e1908f5907b7dbdfd4d0174fba3fd76826d692aff8545b312f6fc2",
+    "baseline": "build59; public storage namespace substituted"
+  },
+  {
+    "file": "scripts/fixtures/build59/src/macos/CatMotion.swift",
+    "sha256": "6b925cd9cca169a70243f9e83ad02f477c6a748d8311174bdd478e7f3a468207",
+    "baseline": "build59; public storage namespace substituted"
+  },
+  {
+    "file": "scripts/fixtures/build59/src/macos/CatMouth.swift",
+    "sha256": "17f6bee7a616854fb4b14dbc90146d51a0b86b7b42619f7187999e4b446c206c",
+    "baseline": "build59; public storage namespace substituted"
+  },
+  {
+    "file": "scripts/fixtures/build59/src/macos/CatMouthArt.swift",
+    "sha256": "9a9e4b37e8304a39342cfeeb8b33f9417ebe04c319445cd60e313401647110f6",
+    "baseline": "build59; public storage namespace substituted"
+  },
+  {
+    "file": "scripts/fixtures/build59/src/macos/CatPaw.swift",
+    "sha256": "8de4b0f91807b473a0358c34831cae8c942aebf2b6039e30ea97d2f9b65f4ebd",
+    "baseline": "build59; public storage namespace substituted"
+  },
+  {
+    "file": "scripts/fixtures/build59/src/macos/CatPawArt.swift",
+    "sha256": "4c4b3366b2a2ce50ba61fc6996aeae3944441a25e456f17e46c6c58f15b8ce7d",
+    "baseline": "build59; public storage namespace substituted"
+  },
+  {
+    "file": "scripts/fixtures/build59/src/macos/CatPawRig.swift",
+    "sha256": "297f45d629155be45f72b20e8b7e98554a264869e059199ef9228ea45c876664",
+    "baseline": "build59; public storage namespace substituted"
+  },
+  {
+    "file": "scripts/fixtures/build59/src/macos/CatPerformancePreview.swift",
+    "sha256": "ca467d3d7abfc2076e75083421c431d4078694bfb9a8cf21b095854e2855ce63",
+    "baseline": "build59; public storage namespace substituted"
+  },
+  {
+    "file": "scripts/fixtures/build59/src/macos/CatPlayMood.swift",
+    "sha256": "4be0d538429d827c79b8b196da32cff764fd9811758d6f2b7040e0a5e4c0de60",
+    "baseline": "build59; public storage namespace substituted"
+  },
+  {
+    "file": "scripts/fixtures/build59/src/macos/CatToy.swift",
+    "sha256": "6d9bb5bb81f172f5225e644fdf39a05472a59bf2a22f45d8b493828d15501c2e",
+    "baseline": "build59; public storage namespace substituted"
+  },
+  {
+    "file": "scripts/fixtures/build59/src/macos/NativeCat.swift",
+    "sha256": "0b165d5d451f780a8ba7b2e33a61f5189f8f328f772a819e5e567b4b5615c0f2",
+    "baseline": "build59; public storage namespace substituted"
+  },
+  {
+    "file": "scripts/fixtures/build59/src/macos/main.swift",
+    "sha256": "ba09595aab3febfd943123172d47d37835e30a3aae81f0ac5a3826ec9d55b41c",
+    "baseline": "build59; public storage namespace substituted"
+  },
+  {
+    "file": "scripts/fixtures/Build61NativeCatSource.swift",
+    "sha256": "f46876b655f2e761b46bacb49ecd2c87c0041017f489fa33436dafdd24dd07e1",
+    "baseline": "build61"
+  }
+]
