@@ -1,0 +1,69 @@
+:root { font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif; color: #564a3b; background: #f6f0e6; font-synthesis: none; }
+* { box-sizing: border-box; }
+body { margin: 0; }
+button { font: inherit; cursor: pointer; -webkit-tap-highlight-color: transparent; }
+button:disabled { cursor: default; opacity: .5; }
+.nest { width: min(100%, 980px); margin: auto; padding: max(22px, env(safe-area-inset-top)) 28px max(24px, env(safe-area-inset-bottom)); }
+header { display:flex; align-items:center; justify-content:space-between; gap:16px; }
+.wordmark { display:flex; align-items:center; gap:9px; font-size:14px; letter-spacing:.12em; }
+.wordmark svg { width:23px; height:23px; fill:none; stroke:currentColor; stroke-width:1.35; stroke-linecap:round; stroke-linejoin:round; }
+.quiet-button { border:1px solid #d9d0c2; background:transparent; border-radius:24px; min-height:44px; padding:0 16px; display:flex; gap:9px; align-items:center; color:#716757; font-size:12px; }
+.intro { text-align:center; margin-top:28px; position:relative; z-index:1; }
+.eyebrow { margin:0 0 10px; font-size:12px; color:#8e816e; letter-spacing:.19em; }
+h1 { font-family:"Songti SC", "STSong", serif; font-size:32px; font-weight:500; letter-spacing:.09em; margin:0; }
+.stage { position:relative; width:min(100%, 610px); aspect-ratio:1; margin:-28px auto -24px; }
+#cat-scene { display:block; width:100%; height:100%; overflow:visible; -webkit-user-select:none; user-select:none; }
+#loading { position:absolute; inset:40% 0 auto; text-align:center; font-size:14px; color:#8e816e; }
+#cat-scene { opacity:0; }
+.ready #cat-scene { opacity:1; }
+#head-hit { cursor:grab; touch-action:none; }
+#head-hit:active { cursor:grabbing; }
+#head-hit:focus-visible { stroke:#8b9879; stroke-width:2; stroke-dasharray:8 9; outline:none; }
+.interaction { position:relative; z-index:1; text-align:center; }
+.response { color:#7d705d; min-height:24px; margin:0 0 14px; font-size:14px; letter-spacing:.06em; }
+.pet-button { min-height:48px; padding:0 30px; display:inline-flex; align-items:center; gap:11px; border:1px solid #839473; border-radius:28px; background:#839473; color:#fffdf6; font-size:15px; transition:background-color 150ms ease, transform 150ms ease; }
+.pet-button svg { width:20px; height:20px; fill:none; stroke:currentColor; stroke-width:1.35; stroke-linecap:round; stroke-linejoin:round; }
+.pet-button:active:not(:disabled) { transform:scale(.97); }
+.hint { color:#958a79; font-size:12px; margin:15px 0 0; line-height:1.7; }
+button:focus-visible { outline:2px solid #637654; outline-offset:4px; }
+[hidden] { display:none !important; }
+#layer-panel { margin:40px auto 0; max-width:640px; padding:20px 0; border-top:1px solid #d9d0c2; font-size:13px; line-height:1.8; }
+#layer-panel label { display:inline-flex; align-items:center; gap:6px; margin:0 18px 12px 0; }
+#layer-panel input { accent-color:#839473; }
+#layer-panel h2 { font-size:16px; }
+.inspect .stage { background:repeating-conic-gradient(#ddd 0% 25%,#eee 0% 50%) 50% / 24px 24px; }
+@media (hover:hover) and (pointer:fine) { .pet-button:hover { background:#718462; } .quiet-button:hover { background:#eee7dc; } }
+@media (min-width:1000px) and (min-height:860px) { .stage { width:650px; } .intro { margin-top:42px; } }
+@media (max-width:560px) { .nest { padding-left:18px; padding-right:18px; } .intro { margin-top:35px; } h1 { font-size:28px; } .stage { width:calc(100% + 36px); margin:0 -18px -4px; } .response { font-size:13px; } .hint { font-size:11px; } }
+@media (max-height:600px) and (min-width:561px) { .intro { margin-top:8px; } h1 { font-size:24px; } .eyebrow { display:none; } .stage { width:330px; margin:-20px auto -12px; } .response { margin-bottom:8px; } .hint { margin-top:8px; } }
+@media (prefers-reduced-motion:reduce) { *, *::before, *::after { animation:none; transition:none; } }
+/* Keep the first interaction visible on laptop screens. */
+.stage { width:min(100%, 610px, calc(100svh - 330px)); min-width:280px; margin:16px auto 18px; border-radius:24px; overflow:hidden; }
+@media (max-width:560px) { .stage { width:100%; min-width:0; margin:18px auto; } }
+@media (max-height:600px) and (min-width:561px) { .stage { min-width:200px; width:calc(100svh - 240px); margin:8px auto; } }
+
+#breathing-cat { transform-box:view-box; transform-origin:55.02% 63.8%; will-change:transform; }
+.mode-switch { display:flex; width:max-content; margin:20px auto 0; padding:4px; border:1px solid #dfd6c8; border-radius:28px; gap:4px; }
+.mode-switch button { border:0; background:transparent; color:#8e816e; min-height:40px; padding:0 22px; border-radius:22px; font-size:13px; }
+.mode-switch button[aria-pressed=true] { background:#e5e9dd; color:#4f6548; }
+.stage { width:min(100%,610px,calc(100svh - 390px)); }
+.study .nest { max-width:480px; padding:16px 18px; }
+.study .intro, .study .hint { display:none; }
+.study .mode-switch { margin-top:14px; }
+.study .stage { width:min(100%,calc(100svh - 290px)); min-width:180px; margin:14px auto; border-radius:20px; }
+.study .response { font-size:13px; letter-spacing:0; margin-bottom:10px; }
+.study .pet-button { min-height:44px; padding:0 22px; font-size:13px; }
+.study-tools { margin-top:14px; text-align:center; font-size:12px; color:#877b69; }
+.study-tools label { display:inline-flex; align-items:center; min-height:44px; gap:6px; }
+.study-tools input { accent-color:#839473; }
+.study-tools button { display:inline-flex; margin-left:10px; font-size:11px; padding:0 12px; }
+#window-note { font-size:11px; line-height:1.6; margin:6px 0 0; }
+@media(max-width:560px) { body:not(.study) .stage { width:100%; } }
+.study .stage { width:min(100%,calc(100svh - 335px)); }
+html:has(.desktop-pet), body.desktop-pet { background:transparent !important; overflow:hidden; }
+.desktop-pet .nest { position:relative; width:100%; max-width:none; height:100vh; padding:0; }
+.desktop-pet header,.desktop-pet .mode-switch,.desktop-pet .study-tools,.desktop-pet .intro,.desktop-pet .pet-button,.desktop-pet .hint { display:none; }
+.desktop-pet.study .stage { position:absolute; left:0; bottom:0; width:100%; min-width:0; height:calc(100% - 60px); aspect-ratio:auto; margin:0; border-radius:0; overflow:visible; }
+.desktop-pet .interaction { position:absolute; top:6px; left:10px; right:10px; pointer-events:none; }
+.desktop-pet .response { display:inline-block; max-width:100%; overflow-wrap:anywhere; border-radius:16px; padding:9px 12px; font-size:12px; line-height:1.5; margin:0; background:#fff8e9; color:#665540; box-shadow:0 2px 6px #0001; }
+.desktop-pet .response:empty { visibility:hidden; }

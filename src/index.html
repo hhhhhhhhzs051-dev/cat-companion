@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; connect-src 'none'; font-src 'self'; base-uri 'none'; form-action 'none'">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f6f0e6">
+  <meta name="color-scheme" content="light">
+  <title>陪你一会儿 · 猫的小窝</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="nest">
+    <header>
+      <span class="wordmark"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 17V7l5 3h4l5-3v10c-1 4-13 4-14 0Z"/><path d="M9 15h.01M15 15h.01M11 18h2"/></svg>猫的小窝</span>
+      <button id="pause" class="quiet-button" type="button" aria-pressed="false" disabled><span id="pause-icon" aria-hidden="true">Ⅱ</span><span id="pause-label">休息一下</span></button>
+    </header>
+    <nav class="mode-switch" aria-label="陪伴模式"><button id="mode-pet" aria-pressed="true">摸摸猫</button><button id="mode-study" aria-pressed="false">陪我学习</button></nav>
+    <section class="intro"><p class="eyebrow">给你留了一个小位置</p><h1>陪你一会儿。</h1></section>
+    <div id="stage" class="stage" aria-busy="true"><p id="loading" role="status">小猫马上就来…</p></div>
+    <section class="interaction" aria-label="和小猫互动">
+      <p id="response" class="response" role="status" aria-live="polite">它在这里，慢慢呼吸。</p>
+      <button id="pet" class="pet-button" type="button" disabled><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 12V6a1.5 1.5 0 0 1 3 0v5-7a1.5 1.5 0 0 1 3 0v7-5a1.5 1.5 0 0 1 3 0v6-3a1.5 1.5 0 0 1 3 0v7c0 4-3 6-6 6-2 0-4-1-5-3l-4-5a1.5 1.5 0 0 1 2-2l1 1Z"/></svg>摸摸头</button>
+      <p class="hint">也可以轻轻点一下，或在额头上摸一摸。</p>
+      <button id="retry" type="button" hidden>重新打开</button>
+    </section>
+    <section class="study-tools" hidden><label><input id="voice-enabled" type="checkbox" checked>偶尔说句话</label><button id="open-window" class="quiet-button">单独打开小窗口</button><p id="window-note">把这个窗口放在书本旁边，我陪你。</p></section>
+    <aside id="layer-panel" hidden aria-label="素材分层检查"></aside>
+    <noscript>请在支持 JavaScript 的浏览器中打开，才能和小猫互动。</noscript>
+  </main>
+  <script src="state.js"></script>
+  <script src="copy-default.js"></script>
+  <script src="copy-config.js"></script>
+  <script src="companion.js"></script>
+  <script src="artwork.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
